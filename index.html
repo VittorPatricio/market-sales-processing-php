@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Supermercado</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+<body>
+    <div class="container">
+      <h1 style="text-align: center;">Processamento de vendas</h1>
+        <form action="calcular.php" method="post">
+            <div class="form-group row">
+              <label for="text" class="col-4 col-form-label">Forneça o Valor da compra do cliente:</label> 
+              <div class="col-8">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <i class="fa fa-money"></i>
+                    </div>
+                  </div> 
+                  <input id="text" name="compra" type="number" class="form-control">
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-4 col-form-label">Forma de pagamento:</label> 
+              <div class="col-8">
+                <div class="custom-controls-stacked">
+                  <div class="custom-control custom-radio">
+                    <input name="cartao" id="radio_0" type="radio" required="required" class="custom-control-input" value="sim"> 
+                    <label for="radio_0" class="custom-control-label">Pagou com cartão</label>
+                  </div>
+                </div>
+                <div class="custom-controls-stacked">
+                  <div class="custom-control custom-radio">
+                    <input name="cartao" id="radio_1" type="radio" required="required" class="custom-control-input" value="não"> 
+                    <label for="radio_1" class="custom-control-label">NÃO pagou com cartão</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-4 col-form-label">Forma de entrega:</label> 
+              <div class="col-8">
+                <div class="custom-controls-stacked">
+                  <div class="custom-control custom-radio">
+                    <input name="entregar" id="radio1_0" type="radio" required="required" class="custom-control-input" value="sim"> 
+                    <label for="radio1_0" class="custom-control-label">Cliente solicitou entrega a domicilio</label>
+                  </div>
+                </div>
+                <div class="custom-controls-stacked">
+                  <div class="custom-control custom-radio">
+                    <input name="entregar" id="radio1_1" type="radio" required="required" class="custom-control-input" value="não">  
+                    <label for="radio1_1" class="custom-control-label">Cliente NÃO solicitou entrega a domicilio</label>
+                  </div>
+                </div>
+              </div>
+            </div> 
+            <div class="form-group row">
+              <div class="offset-4 col-8">
+                <button name="submit" type="submit" class="btn btn-success">Submit</button>
+                <button name="reset" type="reset" class="btn btn-warning">RESET</button>
+              </div>
+            </div>
+          </form>
+    </div>
+</body>
+</html>
